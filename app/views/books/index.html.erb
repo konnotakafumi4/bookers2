@@ -3,23 +3,23 @@
   <div class="row">
     <div class="col-md-3">
       <h2>User info</h2>
-
+      <!--左側-->
       <table class="table">
         <tbody>
           <tr></tr>
           <tr>
             <th>name</th>
-            <th></th>
+            <th></th>　<!--名前を表示したい-->
           </tr>
           <tr>
             <th>introduction</th>
-            <th></th>
+            <th></th>　<!--意見を表示したい-->
           </tr>
         </tbody>
       </table>
 
       <div class="row">
-        <a class="btn btn-outline-secondary btn-block edit_user_19207" href="/users/19207/edit">#ボタン</a>
+        <a class="btn btn-outline-secondary btn-block edit_user_19207" href="/users/19207/edit">user編集</a>
       </div>
 
       <h2 class="mt-3">New book</h2>
@@ -38,6 +38,7 @@
       </div>
       <% end %>
 
+      <!--右側-->
       <div class="col-md-8 offset-md-1">
        <h2>Books</h2>
        <table class="table-hover table-inverse">
@@ -52,7 +53,7 @@
         <tbody>
          <% @books.each do |book| %>
            <tr>
-             <td><%= image_tag book.user.get_profile_image(100,100) %></td>
+             <td><%= image_tag book.user.get_profile_image(100,100) %></td> <!--ここをリンクにしたい-->
              <td><%= link_to book.title, book_path(book.id) %></td>
              <td><%= book.body %></td>
            </tr>
